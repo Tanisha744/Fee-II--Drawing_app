@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Finger+Paint&family=Ibarra+Real+Nova:ital,wght@0,400..700;1,400..700&family=Inter:wght@100..900&family=Kaushan+Script&family=Mochiy+Pop+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nanum+Pen+Script&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:wght@400;500;700&display=swap');
+
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;500&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        overflow-x: hidden;
+        /* overflow-y:scroll; */
+        /* font-family: "Ibarra Real Nova", serif; */
+        /* font-family: "Montserrat Alternates", sans-serif; */
+        font-family: "Onest", sans-serif;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    main {
+        margin: 0px;
+        width: 100vw;
+    }
+
+    /* section{ */
+    /* margin: 0; */
+    /* padding: 0px; */
+    /* } */
+}
+
+@layer components {
+    .nav-link:hover {
+        background-image: linear-gradient(to right top, #fcc187, #ffa97f, #ff8e85, #ff7496, #ff60b1, #f85ac1, #ec57d3, #db58e6, #c559e8, #ae5be8, #965be8, #7b5ce6);
+        background-clip: text;
+        color: transparent;
+    }
+
+    .option:is(:hover, .active) img {
+        filter: invert(17%) sepia(90%) saturate(3000%) hue-rotate(900deg) brightness(100%) contrast(100%);
+    }
+
+    .option :where(span, label) {
+        color: #5A6168;
+        cursor: pointer;
+        padding-left: 10px;
+    }
+
+    /* .option:is(:hover, .active) :where(span, label) { */
+        /* color: #fdfeff; */
+    /* } */
+
+    /* #fill-color:checked~label {
+        color: #ffffff;
+    } */
+
+    .colors .options {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .colors .option {
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+        margin-top: 3px;
+        position: relative;
+    }
+
+    .colors .option:nth-child(1) {
+        --color : #fff;
+        background-color: var(--color);
+        border: 1px solid #bfbfbf;
+    }
+
+    .colors .option:nth-child(2) {
+        --color: #000;
+        /* background-color: #000; */
+        background-color: var(--color);
+    }
+
+    .colors .option:nth-child(3) {
+        --color: #E02020;
+        background-color: var(--color);
+    }
+
+    .colors .option:nth-child(4) {
+        --color: #6DD400;
+        background-color: var(--color);
+    }
+
+    /* .colors .option:nth-child(5) {
+        background-color: #ffffff;
+    } */
+
+    .colors .option.selected::before {
+        position: absolute;
+        content: "";
+        top: 50%;
+        left: 50%;
+        height: 12px;
+        width: 12px;
+        background: inherit;
+        border-radius: inherit;
+        border: 2px solid #fff;
+        transform: translate(-50%, -50%);
+    }
+
+    .colors .option:first-child.selected::before {
+        border-color: #ccc;
+    }
+
+
+}
+
+
+@layer utilities {
+    .main_text {
+        font-family: "Onest", sans-serif;
+    }
+    .nav_list{
+        transition: .3s ease;
+    }
+    .nav_list-menu.active{
+        right:0;
+    }
+
+    .header {
+        background-image: linear-gradient(to right, #fb9ad1, #ec88ce, #da78cc, #c668cb, #ae5bcb, #a454cd, #984dcf, #8b47d2, #8e43d6, #913edb, #9439df, #9733e3);
+    }
+
+    .footer_1 {
+        background-image: linear-gradient(to right, #fb9ad1, #ec88ce, #da78cc, #c668cb, #ae5bcb, #a454cd, #984dcf, #8b47d2, #8e43d6, #913edb, #9439df, #9733e3);
+    }
+
+    .btn {
+        background-image: linear-gradient(to right, #fb9ad1, #ec88ce, #da78cc, #c668cb, #ae5bcb, #a454cd, #984dcf, #8b47d2, #8e43d6, #913edb, #9439df, #9733e3);
+    }
+    @media screen and (max-width: 640px) {
+        
+        .nav__menu{
+            background-image: linear-gradient(to right, #fb9ad1, #ec88ce, #da78cc, #c668cb, #ae5bcb, #a454cd, #984dcf, #8b47d2, #8e43d6, #913edb, #9439df, #9733e3);
+        }
+    }
+}
+
+@layer utilities {
+    .yellow {
+        transform: scaleY(-1) scaleX(-1);
+    }
+
+    .draw {
+        font-family: "Kaushan Script", cursive;
+    }
+
+    
+    .canva {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background-color: #f4d1ff;
+        
+    }
+
+
+    .container_1 {
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .row .options .option {
+        display: flex;
+        cursor: pointer;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    .option #color-picker {
+        opacity: 0;
+        cursor: pointer;
+    }
+
+
+    .tools-board {
+        width: 210px;
+        padding: 15px 22px 0;
+    }
+
+
+    .row .options {
+        list-style: none;
+        margin: 10px 0 0 5px;
+    }
+
+    .buttons button {
+        width: 100%;
+        /* color: #fff; */
+        /* border: none; */
+        /* outline: none; */
+        padding: 11px 0;
+        font-size: 0.9rem;
+        margin-bottom: 13px;
+        /* background: none; */
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .save-img {
+        /* background:linear-gradient(to right, #fb9ad1, #ec88ce, #da78cc, #c668cb, #ae5bcb, #a454cd, #984dcf, #8b47d2, #8e43d6, #913edb, #9439df, #9733e3) ; */
+        color: white;
+        font-size: 15px;
+        font-weight: 500;
+        align-items: center;
+        border: 2px solid #f4f1f5;
+        padding: 10px;
+        border-radius: 10px;
+    }
+    .drawing-board{
+        overflow-y: hidden;
+    }
+    /* .picker{ */
+        /* transform: translateY(-50%); */
+    /* } */
+    .picker {
+        font-family: "Font Awesome 5 Free"; /* Ensure the correct font family for Font Awesome icons */
+        font-weight: 900; /* Adjust the font weight if needed */
+        font-size: 1.25rem; /* Adjust the font size if needed */
+        line-height: 1; /* Adjust the line height if needed */
+        color: inherit; /* Inherit the color from the parent element */
+        position: absolute;
+        pointer-events: none;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    
+}
+
+.clear-canvas {
+    background-clip: text;
+    color: transparent;
+    font-weight: 700;
+    padding: 8px;
+    background-image: linear-gradient(to right, #fb9ad1, #ec88ce, #da78cc, #c668cb, #ae5bcb, #a454cd, #984dcf, #8b47d2, #8e43d6, #913edb, #9439df, #9733e3);
+    border: 3px solid #ae5bcb;
+}
+

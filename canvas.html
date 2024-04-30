@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Drawing App JavaScript | Tanisha</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- <script src="main.js" defer></script> -->
+</head>
+
+<body class="canva max-sm:gap-[0.5rem] flex-col gap-2 ">
+    <header class="header relative  text-white w-screen z-[100] h-[5.5rem]  " id="header">
+        <nav
+            class="nav container_1  flex justify-between items-center h-full  w-full flex-row p-6 max-sm:p-0  max-sm:gap-28">
+            <a href="index.html" class="nav__logo flex items-center gap-2">
+                <img src="/images/logo.jpg" alt="" class=" w-[80px] rounded-lg h-auto">
+                <p class="text-2xl max-sm:text-xl">SIMPLYDRAW </p>
+            </a>
+
+            <div class="nav__menu_1  max-sm:w-full max-sm:px-6" id="nav-menu">
+                <ul
+                    class="nav__list flex gap-8 text-l max-sm:flex-row  max-sm:gap-1 justify-center items-center max-sm:items-center max-sm:justify-center ">
+                    <li class="nav__item">
+                        <div
+                            class="flex text-xl border-[3px] border-[#f4d1ff] justify-center items-center w-[6rem]  h-[40px] max-sm:top[5px] max-sm:w-[4rem] max-sm:h-[2rem]">
+                            <button class="undo-btn mt-3 p-[4px] pr-[3px] pb-[20px]">
+                                <i class="ri-arrow-go-back-line text-2xl text-[#f4d1ff] max-sm:text-sm"></i>
+                            </button>
+                            <p class="text-[#f4d1ff] font-semibold">|</p>
+                            <button class="redo-btn mt-3 p-[4px] pl-[3px] pb-[20px]">
+                                <i class="ri-arrow-go-forward-line text-2xl text-[#f4d1ff] max-sm:text-sm"></i>
+                            </button>
+                        </div>
+                    </li>
+
+                    <li class="nav__item ">
+                        <button class="save-img max-sm:w-[6rem] max-sm:h-auto font-bold ">Save As Image</button>
+                    </li>
+
+                    <!-- Close button -->
+                    <!-- <div class="nav__close max-sm:absolute max-sm:top-0 hidden max-sm:flex max-sm:left-full" id="nav-close">
+                        <i class="ri-close-large-line"></i>
+                    </div> -->
+                </ul>
+            </div>
+
+            <!-- Toggle button -->
+            <!-- <div class="nav__toggle" id="nav-toggle"> -->
+            <!-- <i class="ri-menu-line"></i> -->
+            <!-- </div> -->
+        </nav>
+    </header>
+    <div class="container_1 flex relative flex-row  w-full max-w-[1150px] h-[90vh] justify-center gap-4">
+        <section class="tools-board bg-[#fff] rounded-[7px] w-[210px] h-[80vh]">
+            <div class="row mb-[20px]">
+                <label class="title">Shapes</label>
+                <ul class="options list-none">
+                    <li class="option tool " id="rectangle">
+                        <img src="icons/rectangle.svg" alt="">
+                        <span>Rectangle</span>
+                    </li>
+                    <li class="option tool" id="circle">
+                        <img src="icons/circle.svg" alt="">
+                        <span>Circle</span>
+                    </li>
+                    <li class="option tool" id="triangle">
+                        <img src="icons/triangle.svg" alt="">
+                        <span>Triangle</span>
+                    </li>
+                    <li class="option">
+                        <input type="checkbox" id="fill-color" class="cursor-pointer h-[14px] w-[14px]">
+                        <label for="fill-color">Fill color</label>
+                    </li>
+                </ul>
+            </div>
+            <div class="row">
+                <label class="title">Options</label>
+                <ul class="options">
+                    <li class="option active tool" id="brush">
+                        <img src="icons/brush.svg" alt="">
+                        <span>Brush</span>
+                    </li>
+                    <li class="option tool" id="eraser">
+                        <img src="icons/eraser.svg" alt="">
+                        <span>Eraser</span>
+                    </li>
+                    <li class="option">
+                        <input type="range" id="size-slider" class="w-full h-[5px] mt-[10px]" min="1" max="30"
+                            value="5">
+                    </li>
+                </ul>
+            </div>
+            <div class="row colors">
+                <label class="title">Colors</label>
+                <ul class="options">
+                    <li class="option"></li>
+                    <li class="option selected"></li>
+                    <li class="option"></li>
+                    <li class="option"></li>
+                    <li class="option relative">
+                        <i class="picker fa-solid fa-eye-dropper absolute pointer-events-none text-black top-[50%] "></i>
+                        <input type="color" id="color-picker" value="#fff" class="">
+                    </li>
+                </ul>
+
+            </div>
+            <button class="clear-canvas mt-3">Clear Canvas</button>
+        </section>
+        <section class="drawing-board flex flex-row overflow-hidden rounded-lg w-auto h-[80vh] ">
+            <canvas class="h-full"></canvas>
+        </section>
+    </div>
+    <script src="new.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Basic Page Needs
+================================================== -->
+    <meta charset="utf-8">
+    <title>index</title>
+
+    <!-- Mobile Specific Metas
+================================================== -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="author" content="">
+    <meta name="generator" content="">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="images/Paint.png" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css">
+    <!-- Main Stylesheet -->
+    <!-- <link href="output.css" rel="stylesheet"> -->
+
+    <link rel="stylesheet" href="output.css">
+
+</head>
+
+<body>
+    <header class="header relative  text-white w-screen z-[100] h-[5.5rem]" id="header">
+        <nav class="nav container_1  flex justify-between items-center h-full  w-full  flex-row p-6">
+            <a href="#" class="nav__logo flex items-center gap-2">
+                <img src="/images/logo.jpg" alt="" class=" w-[80px] rounded-lg h-auto">
+                <p class="text-2xl">SIMPLYDRAW </p>
+            </a>
+
+            <div class="nav__menu max-sm:bg-gradient max-sm:w-screen max-sm:fixed max-sm:px-0  max-sm:right-[0%]"
+                id="nav-menu">
+                <ul class="nav__list flex gap-8 text-xl max-sm:flex-col max-sm:h-[10rem] max-sm:gap-0 max-sm:w-full  max-sm:pt-4 max-sm:justify-center max-sm:items-start">
+                    <li class="nav__item">
+                        <a href="#" class="nav__link scroll-smooth">
+                            <span>Home</span>
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link scroll-smooth transition">
+                            <span>About Us</span>
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#creators" class="nav__link">
+                            <span>Creators</span>
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#contact" class="nav__link">
+                            <span>Contact Us</span>
+                        </a>
+                    </li>
+
+                    <!-- Close button -->
+                </ul>
+                <div class="nav__close max-sm:absolute hidden   max-sm:right-[1.5rem] max-sm:top-[1rem] text-white max-sm:flex max-sm:z-[999]" id="nav-close">
+                    <i class="ri-close-large-line"></i>
+                </div>
+            </div>
+
+            <!-- Toggle button -->
+            <div class="nav__toggle hidden max-sm:flex text-white" id="nav-toggle">
+            <i class="ri-menu-line"></i>
+            </div>
+        </nav>
+    </header>
+
+    <section>
+        <div class="main_page home h-[580px]  w-screen relative" id="home">
+            <video src="/images/main new.mp4" class="w-full h-full absolute z-[-1] object-cover " autoplay muted=""
+                loop></video>
+            <div class="content w-full h-full flex flex-col justify-center pt-12 pl-[3rem] text-white  gap-4">
+                <h1 class="text-7xl main_text">
+                    <strong>Unleash Your Inner Artist</strong>
+                </h1>
+                <p class="text-[22px]">Let your imagination run wild on our
+                    interactive
+                    canvas with a variety of tools at your fingertips!</p>
+                <div class="mt-6">
+                    <a class="border-[2px] border-solid text-3xl rounded-[100px] py-[0.75rem] px-[1.5rem]"
+                        href="canvas.html">Start Drawing</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="about relative bg-[#F4D1FF] w-full h-auto  flex justify-center items-center" id="about">
+            <div class="h-[450px] max-sm:h-[600px] flex max-sm:flex-col w-full justify-center items-center p-9">
+                <div
+                    class="h-[400px] max-sm:h-[250px] max-sm:w-full w-[50%] bg-white flex flex-col justify-center items-start p-8 rounded-xl gap-4 max-sm:gap-1">
+                    <h3 class="text-[50px] max-sm:text-[30px] leading-[80px] max-sm:leading-[40px]">
+                        <strong>About SimplyDraw</strong>
+                    </h3>
+                    <div class="">
+                        <p class="text-[18px] max-sm:text-[14px] pb-5 max-sm:pb-1">Welcome to the ultimate digital
+                            playground
+                            for artists
+                            of all levels. Dive into a world where creativity knows no bounds.
+                        </p>
+                        <p class="text-[18px] max-sm:text-[14px] pb-5 max-sm:pb-1">Express yourself with a variety of
+                            tools
+                            including
+                            pencils, brushes, and a rainbow of colors. Unleash your inner Picasso!</p>
+                        <p class="text-[18px] max-sm:text-[14px] pb-5 max-sm:pb-1">Don't hold back - save your
+                            masterpieces,
+                            share them
+                            with the world, and let your art speak volumes.</p>
+                    </div>
+                </div>
+                <div class="h-[400px] w-[50%] max-sm:h-[280px] max-sm:w-full">
+                    <img src="/images/about_img.jpg" alt="" class="rounded-xl w-full h-full">
+                </div>
+            </div>
+        </div>
+        <div class="Creators_section creators bg-[#F4D1FF] w-full h-[600px] flex flex-col justify-center items-center gap-6 max-sm:h-[1100px]"
+            id="creators">
+            <div class="text-[4rem] font-semibold">
+                <h1>Creators</h1>
+            </div>
+
+            <div class="cards flex flex-row max-sm:flex-col  gap-3">
+                <div class="card bg-white w-[407px] h-[300px] p-[36px] rounded-lg flex flex-col items-center gap-3">
+                    <p class="card_description text-[22px]">SimplyDraw revolutionized how I express myself digitally.
+                        The tools are intuitive, and the canvas is limitless.</p>
+                    <img src="/images/maxwell.jpeg" alt="" class="rounded-[50%] w-[70px]">
+                    <p class="font-bold">Maxwell Artiste</p>
+                </div>
+                <div class="card bg-white w-[407px] h-[300px] p-[36px] rounded-lg flex flex-col items-center gap-3">
+                    <p class="card_description text-[22px]">I've never had more fun drawing online! The eraser tool is
+                        a game-changer, and sharing my creations is a breeze.</p>
+                    <img src="/images/luna.jpeg" alt="" class="rounded-[50%] w-[70px]">
+                    <p class="font-bold">Luna Sketcher</p>
+                </div>
+                <div class="card bg-white w-[407px] h-[300px] p-[36px] rounded-lg flex flex-col items-center gap-3">
+                    <p class="card_description text-[22px]">SimplyDraw canvas resizing feature is a game-changer. I
+                        can go from a tiny sketch to a grand masterpiece in seconds!</p>
+                    <img src="/images/gujju.jpeg" alt="" class="rounded-[50%] w-[70px]">
+                    <p class="font-bold">Leo SimplyMaster</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact relative bg-[#F4D1FF] w-full h-[500px] flex justify-center items-center flex-col"
+            id="contact">
+            <div class="text-[4rem] max-sm:text-[200%]">
+                <h1>Unleash Your Creativity</h1>
+            </div>
+            <div class="flex flex-col w-[70%] p-8 gap-4 ">
+                <div class="flex w-full gap-2">
+                    <input type="text" placeholder="Name" class="w-[50%] rounded-2xl h-[70px] p-6 text-xl outline-none">
+                    <input type="Email" placeholder="Email"
+                        class="w-[50%] rounded-2xl h-[70px] p-6 text-xl outline-none">
+                </div>
+                <input type="number" placeholder="Phone" class="w-full rounded-2xl h-[70px] p-6 text-xl outline-none">
+                <input type="text" placeholder="Email" class="w-full rounded-2xl h-[70px] p-6 text-xl outline-none">
+            </div>
+            <div>
+                <button class="btn w-[200px] h-[60px] rounded-2xl text-xl text-white">Contact Us</button>
+            </div>
+        </div>
+
+        <div class=" footer_1 w-full flex flex-col justify-center items-center gap-2 h-[7rem] bg-black text-white">
+            <div class="white flex gap-3 text-2xl">
+                <i class="ri-facebook-circle-fill"></i>
+                <i class="ri-twitter-fill"></i>
+                <i class="ri-instagram-fill"></i>
+                <i class="ri-youtube-fill"></i>
+            </div>
+            <div>
+                <p>© 2024 Tanisha. All Rights Reserved.</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
